@@ -8,11 +8,11 @@ import { useEffect } from "react";
 const Index = () => {
   const speakers = [
     { name: "Azul Garza", company: "Nixtla", avatar: "AG", image: "/lovable-uploads/15e00819-5160-4f91-97c8-26661754c6a2.png" },
-    { name: "Mariana Menchero", company: "Company", avatar: "MM", image: "/lovable-uploads/b62b47fc-fb23-405c-98e8-8e14121ec591.png" },
-    { name: "Yibei Hu", company: "Company", avatar: "YH", image: "/lovable-uploads/bc04d95d-c3c9-42ae-8242-04fac7216865.png" },
-    { name: "Khuyen Tran", company: "Company", avatar: "KT", image: "/lovable-uploads/7caa8d3a-9f6c-4826-802a-da4636221a8e.png" },
-    { name: "Laila Ahadi Akhlaghi", company: "Company", avatar: "LA", image: "/lovable-uploads/72b2a77a-d8e6-4306-a637-88a97cb9dfc8.png" },
-    { name: "Ritika Arora", company: "Company", avatar: "RA", image: "/lovable-uploads/8fd9d7ab-dd0e-4ae7-bb75-51aea87e34d1.png" },
+    { name: "Mariana Menchero", company: "Nixtla", avatar: "MM", image: "/lovable-uploads/b62b47fc-fb23-405c-98e8-8e14121ec591.png" },
+    { name: "Yibei Hu", company: "Nixtla", avatar: "YH", image: "/lovable-uploads/bc04d95d-c3c9-42ae-8242-04fac7216865.png" },
+    { name: "Khuyen Tran", company: "Nixtla", avatar: "KT", image: "/lovable-uploads/7caa8d3a-9f6c-4826-802a-da4636221a8e.png" },
+    { name: "Laila Ahadi Akhlaghi", company: "JSI", avatar: "LA", image: "/lovable-uploads/72b2a77a-d8e6-4306-a637-88a97cb9dfc8.png" },
+    { name: "Ritika Arora", company: "Ph.D Candidate in Retail Forecasting", avatar: "RA", image: "/lovable-uploads/8fd9d7ab-dd0e-4ae7-bb75-51aea87e34d1.png" },
   ];
 
   useEffect(() => {
@@ -32,10 +32,18 @@ const Index = () => {
       {/* Header */}
       <header className="flex justify-between items-center p-6 max-w-7xl mx-auto">
         <div className="flex items-center space-x-2">
-          <div className="text-2xl text-purple-600">▷ WIF</div>
+          <img 
+            src="/lovable-uploads/01369b9f-6dca-4a39-9faf-7293038d1408.png" 
+            alt="WIF Logo" 
+            className="h-8"
+          />
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-xl">✕✕ NIXTLA</span>
+          <img 
+            src="/lovable-uploads/01369b9f-6dca-4a39-9faf-7293038d1408.png" 
+            alt="Nixtla Logo" 
+            className="h-8"
+          />
         </div>
       </header>
 
