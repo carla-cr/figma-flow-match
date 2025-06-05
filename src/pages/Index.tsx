@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,7 +7,7 @@ import { useEffect } from "react";
 const Index = () => {
   const speakers = [
     { name: "Azul Garza", company: "Nixtla", avatar: "AG", image: "photo-1649972904349-6e44c42644a7" },
-    { name: "Mariana Menchero", company: "Company", avatar: "MM", image: "photo-1581091226825-a6a2a5aee158" },
+    { name: "Mariana Menchero", company: "Company", avatar: "MM", image: "/lovable-uploads/b62b47fc-fb23-405c-98e8-8e14121ec591.png" },
     { name: "Yibei Hu", company: "Company", avatar: "YH", image: "photo-1519389950473-47ba0277781c" },
     { name: "Khuyen Tran", company: "Company", avatar: "KT", image: "photo-1581092795360-fd1ca04f0952" },
     { name: "Laila Ahadi Akhlaghi", company: "Company", avatar: "LA", image: "photo-1649972904349-6e44c42644a7" },
@@ -83,10 +82,10 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {speakers.map((speaker, index) => (
               <div key={index} className="text-center">
-                <div className="bg-white rounded-lg p-6 shadow-sm mx-auto mb-3 w-40 h-32 flex items-center justify-center">
+                <div className="bg-white rounded-lg p-6 shadow-sm mx-auto mb-3 w-48 h-32 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden">
                     <img
-                      src={`https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
+                      src={speaker.image.startsWith('/') ? speaker.image : `https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
                       alt={speaker.name}
                       className="w-full h-full object-cover"
                     />
