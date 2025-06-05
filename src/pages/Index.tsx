@@ -40,7 +40,7 @@ const Index = () => {
         </div>
         <div className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/01369b9f-6dca-4a39-9faf-7293038d1408.png" 
+            src="/lovable-uploads/626b7a17-aa02-4269-a6e7-4afa38bae757.png" 
             alt="Nixtla Logo" 
             className="h-8"
           />
@@ -51,7 +51,7 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-normal mb-6">
             Welcoming <span className="text-pink-500">Women in</span>
             <br />
             <span className="text-pink-500">Forecasting</span> all over the world
