@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,7 +12,7 @@ const Index = () => {
     { name: "Yibei Hu", company: "Company", avatar: "YH", image: "photo-1519389950473-47ba0277781c" },
     { name: "Khuyen Tran", company: "Company", avatar: "KT", image: "photo-1581092795360-fd1ca04f0952" },
     { name: "Laila Ahadi Akhlaghi", company: "Company", avatar: "LA", image: "photo-1649972904349-6e44c42644a7" },
-    { name: "Ritika Arora", company: "Company", avatar: "RA", image: "photo-1581091226825-a6a2a5aee158" },
+    { name: "Ritika Arora", company: "Company", avatar: "RA", image: "/lovable-uploads/8fd9d7ab-dd0e-4ae7-bb75-51aea87e34d1.png" },
   ];
 
   useEffect(() => {
