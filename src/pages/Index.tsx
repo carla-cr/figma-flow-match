@@ -49,10 +49,12 @@ const Index = () => {
             <span className="text-pink-500">Forecasting</span> all over the world
           </h1>
           
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Women working in the forecasting sphere come together to share
-            insights, experiences, and the latest trends in the industry.
-          </p>
+          <div className="bg-gradient-to-r from-purple-200 via-pink-100 to-purple-300 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700">
+              Women working in the forecasting sphere come together to share
+              insights, experiences, and the latest trends in the industry.
+            </p>
+          </div>
           
           <p className="text-pink-500 font-semibold text-lg">
             June 25, 2025 8AM PT
@@ -81,7 +83,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {speakers.map((speaker, index) => (
               <div key={index} className="text-center">
-                <div className="bg-white rounded-lg p-4 shadow-sm mx-auto mb-3 w-32 h-32 flex items-center justify-center">
+                <div className="bg-white rounded-lg p-6 shadow-sm mx-auto mb-3 w-40 h-32 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden">
                     <img
                       src={`https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
@@ -96,7 +98,10 @@ const Index = () => {
             ))}
           </div>
           
-          <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg mb-8">
+          <Button 
+            className="text-white px-8 py-3 rounded-lg mb-8 hover:opacity-90"
+            style={{ backgroundColor: '#6A1B9A' }}
+          >
             Register now!
           </Button>
           
