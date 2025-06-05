@@ -42,7 +42,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/87c7d1fc-d4ac-459a-8da0-cf707f9f905b.png" 
             alt="Nixtla Logo" 
-            className="h-8"
+            className="h-6 object-contain"
           />
         </div>
       </header>
