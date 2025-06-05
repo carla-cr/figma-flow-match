@@ -40,9 +40,9 @@ const Index = () => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-6 py-12">
+      <main className="max-w-4xl mx-auto px-6 py-8">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Welcoming <span className="text-pink-500">Women in</span>
             <br />
@@ -60,13 +60,15 @@ const Index = () => {
         </div>
 
         {/* Registration Form */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h2 className="text-2xl font-bold text-pink-500 mb-2">
-            Empower Your Future at Women in Forecast
-          </h2>
-          <p className="text-gray-600 mb-8">
-            Join a movement of visionaries shaping tomorrow, reserve your spot today!
-          </p>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-12 max-w-2xl mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-pink-500 mb-2">
+              Empower Your Future at Women in Forecast
+            </h2>
+            <p className="text-gray-600">
+              Join a movement of visionaries shaping tomorrow, reserve your spot today!
+            </p>
+          </div>
           
           {/* HubSpot Form */}
           <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
