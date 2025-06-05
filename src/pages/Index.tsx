@@ -3,26 +3,39 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect } from "react";
 
 const Index = () => {
   const speakers = [
-    { name: "Azul Garza", company: "Nixtla", avatar: "AG" },
-    { name: "Mariana Menchero", company: "Company", avatar: "MM" },
-    { name: "Yibei Hu", company: "Company", avatar: "YH" },
-    { name: "Khuyen Tran", company: "Company", avatar: "KT" },
-    { name: "Laila Ahadi Akhlaghi", company: "Company", avatar: "LA" },
-    { name: "Ritika Arora", company: "Company", avatar: "RA" },
+    { name: "Azul Garza", company: "Nixtla", avatar: "AG", image: "photo-1649972904349-6e44c42644a7" },
+    { name: "Mariana Menchero", company: "Company", avatar: "MM", image: "photo-1581091226825-a6a2a5aee158" },
+    { name: "Yibei Hu", company: "Company", avatar: "YH", image: "photo-1519389950473-47ba0277781c" },
+    { name: "Khuyen Tran", company: "Company", avatar: "KT", image: "photo-1581092795360-fd1ca04f0952" },
+    { name: "Laila Ahadi Akhlaghi", company: "Company", avatar: "LA", image: "photo-1649972904349-6e44c42644a7" },
+    { name: "Ritika Arora", company: "Company", avatar: "RA", image: "photo-1581091226825-a6a2a5aee158" },
   ];
+
+  useEffect(() => {
+    // Load HubSpot form script
+    const script = document.createElement('script');
+    script.src = 'https://js.hsforms.net/forms/embed/45906594.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-purple-200">
       {/* Header */}
       <header className="flex justify-between items-center p-6 max-w-7xl mx-auto">
         <div className="flex items-center space-x-2">
-          <div className="text-2xl font-bold text-purple-600">▷ WIF</div>
+          <div className="text-2xl text-purple-600">▷ WIF</div>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-xl font-bold">✕✕ NIXTLA</span>
+          <span className="text-xl">✕✕ NIXTLA</span>
         </div>
       </header>
 
@@ -55,53 +68,8 @@ const Index = () => {
             Join a movement of visionaries shaping tomorrow, reserve your spot today!
           </p>
           
-          <form className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <Label htmlFor="name" className="text-sm font-medium text-gray-700">
-                  Name *
-                </Label>
-                <Input 
-                  id="name" 
-                  placeholder="full name" 
-                  className="mt-1"
-                />
-              </div>
-              <div>
-                <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                  Email *
-                </Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  placeholder="example@email.com" 
-                  className="mt-1"
-                />
-              </div>
-            </div>
-            
-            <div>
-              <Label htmlFor="company" className="text-sm font-medium text-gray-700">
-                Company (Optional)
-              </Label>
-              <Input 
-                id="company" 
-                placeholder="name of the company" 
-                className="mt-1"
-              />
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <p className="text-xs text-gray-500">
-                By registering, you agree to our{" "}
-                <a href="#" className="text-pink-500 underline">Privacy Policy</a>{" "}
-                and consent to occasional event updates.
-              </p>
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-2 rounded-lg">
-                Confirm my spot!
-              </Button>
-            </div>
-          </form>
+          {/* HubSpot Form */}
+          <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
         </div>
 
         {/* Speakers Section */}
@@ -111,8 +79,12 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {speakers.map((speaker, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-semibold text-lg mx-auto mb-3">
-                  {speaker.avatar}
+                <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg mx-auto mb-3 overflow-hidden">
+                  <img
+                    src={`https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
+                    alt={speaker.name}
+                    className="w-20 h-20 rounded-full object-cover"
+                  />
                 </div>
                 <h3 className="font-semibold text-gray-800">{speaker.name}</h3>
                 <p className="text-sm text-gray-500">{speaker.company}</p>
