@@ -12,7 +12,7 @@ const Index = () => {
     { name: "Yibei Hu", company: "Nixtla", avatar: "YH", image: "/lovable-uploads/bc04d95d-c3c9-42ae-8242-04fac7216865.png" },
     { name: "Khuyen Tran", company: "Nixtla", avatar: "KT", image: "/lovable-uploads/7caa8d3a-9f6c-4826-802a-da4636221a8e.png" },
     { name: "Laila Ahadi Akhlaghi", company: "JSI", avatar: "LA", image: "/lovable-uploads/72b2a77a-d8e6-4306-a637-88a97cb9dfc8.png" },
-    { name: "Ritika Arora", company: "Ph.D Candidate in Retail Forecasting", avatar: "RA", image: "/lovable-uploads/8fd9d7ab-dd0e-4ae7-bb75-51aea87e34d1.png" },
+    { name: "Ritika Arora", company: "Lancaster University", avatar: "RA", image: "/lovable-uploads/8fd9d7ab-dd0e-4ae7-bb75-51aea87e34d1.png" },
   ];
 
   useEffect(() => {
