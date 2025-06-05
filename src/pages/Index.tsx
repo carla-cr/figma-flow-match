@@ -90,7 +90,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {speakers.map((speaker, index) => (
               <div key={index} className="text-center">
-                <div className="bg-white rounded-lg p-6 shadow-sm mx-auto mb-3 w-48 h-32 flex items-center justify-center">
+                <div className="bg-white rounded-lg p-6 shadow-sm mx-auto mb-3 w-48 h-40 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden">
                     <img
                       src={speaker.image.startsWith('/') ? speaker.image : `https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
