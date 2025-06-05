@@ -59,19 +59,19 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Registration Form */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-12 max-w-2xl mx-auto">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-pink-500 mb-2">
-              Empower Your Future at Women in Forecast
-            </h2>
-            <p className="text-gray-600">
-              Join a movement of visionaries shaping tomorrow, reserve your spot today!
-            </p>
-          </div>
+        {/* Registration Form Section */}
+        <div className="text-center mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-pink-500 mb-2">
+            Empower Your Future at Women in Forecast
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Join a movement of visionaries shaping tomorrow, reserve your spot today!
+          </p>
           
           {/* HubSpot Form */}
-          <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-12">
+            <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
+          </div>
         </div>
 
         {/* Speakers Section */}
@@ -81,12 +81,14 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {speakers.map((speaker, index) => (
               <div key={index} className="text-center">
-                <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg mx-auto mb-3 overflow-hidden">
-                  <img
-                    src={`https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
-                    alt={speaker.name}
-                    className="w-20 h-20 rounded-full object-cover"
-                  />
+                <div className="bg-white rounded-lg p-4 shadow-sm mx-auto mb-3 w-32 h-32 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full overflow-hidden">
+                    <img
+                      src={`https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 <h3 className="font-semibold text-gray-800">{speaker.name}</h3>
                 <p className="text-sm text-gray-500">{speaker.company}</p>
