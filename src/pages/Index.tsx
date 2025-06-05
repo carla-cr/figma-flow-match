@@ -11,7 +11,7 @@ const Index = () => {
     { name: "Mariana Menchero", company: "Company", avatar: "MM", image: "/lovable-uploads/b62b47fc-fb23-405c-98e8-8e14121ec591.png" },
     { name: "Yibei Hu", company: "Company", avatar: "YH", image: "/lovable-uploads/bc04d95d-c3c9-42ae-8242-04fac7216865.png" },
     { name: "Khuyen Tran", company: "Company", avatar: "KT", image: "/lovable-uploads/7caa8d3a-9f6c-4826-802a-da4636221a8e.png" },
-    { name: "Laila Ahadi Akhlaghi", company: "Company", avatar: "LA", image: "photo-1649972904349-6e44c42644a7" },
+    { name: "Laila Ahadi Akhlaghi", company: "Company", avatar: "LA", image: "/lovable-uploads/72b2a77a-d8e6-4306-a637-88a97cb9dfc8.png" },
     { name: "Ritika Arora", company: "Company", avatar: "RA", image: "/lovable-uploads/8fd9d7ab-dd0e-4ae7-bb75-51aea87e34d1.png" },
   ];
 
