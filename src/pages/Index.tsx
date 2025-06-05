@@ -40,7 +40,7 @@ const Index = () => {
         </div>
         <div className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/626b7a17-aa02-4269-a6e7-4afa38bae757.png" 
+            src="/lovable-uploads/87c7d1fc-d4ac-459a-8da0-cf707f9f905b.png" 
             alt="Nixtla Logo" 
             className="h-8"
           />
