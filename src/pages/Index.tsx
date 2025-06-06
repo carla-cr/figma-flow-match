@@ -28,7 +28,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-pink-300">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-100">
       {/* Header */}
       <header className="flex justify-between items-center p-6 max-w-7xl mx-auto">
         <div className="flex items-center space-x-2">
@@ -57,7 +57,7 @@ const Index = () => {
             <span className="text-pink-500">Forecasting</span> all over the world
           </h1>
           
-          <div className="bg-gradient-to-r from-purple-200 via-pink-100 to-purple-300 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+          <div className="bg-white rounded-lg p-6 mb-8 max-w-2xl mx-auto shadow-sm">
             <p className="text-lg text-gray-700 mb-4">
               Women working in the forecasting sphere come together to share
               insights, experiences, and the latest trends in the industry.
