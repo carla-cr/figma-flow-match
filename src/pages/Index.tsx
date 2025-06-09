@@ -27,6 +27,13 @@ const Index = () => {
     };
   }, []);
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById('hubspot-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-100">
       {/* Header */}
@@ -69,7 +76,7 @@ const Index = () => {
         </div>
 
         {/* Registration Form Section */}
-        <div className="text-center mb-8 max-w-2xl mx-auto">
+        <div className="text-center mb-8 max-w-2xl mx-auto" id="hubspot-form">
           <h2 className="text-2xl font-bold text-pink-500 mb-2">
             Empower Your Future at Women in Forecast
           </h2>
@@ -108,6 +115,7 @@ const Index = () => {
           <Button 
             className="text-white px-8 py-3 rounded-lg mb-8 hover:opacity-90"
             style={{ backgroundColor: '#6A1B9A' }}
+            onClick={scrollToForm}
           >
             Register now!
           </Button>
