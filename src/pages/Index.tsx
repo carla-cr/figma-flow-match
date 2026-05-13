@@ -45,9 +45,10 @@ const Index = () => {
             className="h-8"
           />
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-3">
+          <span className="text-xs md:text-sm text-purple-900/80 font-medium">In partnership with IIF</span>
           <img 
-            src="/lovable-uploads/87c7d1fc-d4ac-459a-8da0-cf707f9f905b.png" 
+            src="/lovable-uploads/nixtla-logo.svg" 
             alt="Nixtla Logo" 
             className="h-6 object-contain"
           />
