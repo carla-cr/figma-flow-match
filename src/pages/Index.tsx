@@ -46,12 +46,6 @@ const Index = () => {
           />
         </div>
         <div className="flex items-center space-x-3">
-          <span className="text-xs md:text-sm text-purple-900/80 font-medium">In partnership with</span>
-          <img
-            src="/lovable-uploads/iif-logo.png"
-            alt="International Institute of Forecasters"
-            className="h-8 object-contain"
-          />
           <img
             src="/lovable-uploads/nixtla-logo.svg"
             alt="Nixtla Logo"
@@ -127,6 +121,15 @@ const Index = () => {
           </Button>
           
           <p className="text-sm text-gray-500">Powered By Nixtla</p>
+
+          <div className="mt-10 flex flex-col items-center space-y-3">
+            <span className="text-sm text-purple-900/80 font-medium">In partnership with</span>
+            <img
+              src="/lovable-uploads/iif-logo.png"
+              alt="International Institute of Forecasters"
+              className="h-16 object-contain"
+            />
+          </div>
         </div>
       </main>
     </div>
