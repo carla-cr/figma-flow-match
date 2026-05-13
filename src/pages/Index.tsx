@@ -13,7 +13,7 @@ const Index = () => {
     { name: "Anna Sroginis", company: "Lancaster University", avatar: "AS", image: "/lovable-uploads/anna-sroginis.jpg" },
     { name: "Yeasmin Khandakar", company: "Monash University", avatar: "YK", image: "/lovable-uploads/yeasmin-khandakar.jpg" },
     { name: "Charupriya Sharma", company: "Amazon", avatar: "CS", image: "/lovable-uploads/charupriya-sharma.jpg" },
-    { name: "Xinyu (Rachel) Li", company: "Carnegie Mellon University", avatar: "XL", image: "" },
+    { name: "Xinyu (Rachel) Li", company: "Carnegie Mellon University", avatar: "XL", image: "/lovable-uploads/xinyu-li.jpg" },
   ];
 
   useEffect(() => {
