@@ -7,12 +7,13 @@ import { useEffect } from "react";
 
 const Index = () => {
   const speakers = [
-    { name: "Azul Garza", company: "Nixtla", avatar: "AG", image: "/lovable-uploads/15e00819-5160-4f91-97c8-26661754c6a2.png" },
     { name: "Mariana Menchero", company: "Nixtla", avatar: "MM", image: "/lovable-uploads/b62b47fc-fb23-405c-98e8-8e14121ec591.png" },
     { name: "Yibei Hu", company: "Nixtla", avatar: "YH", image: "/lovable-uploads/bc04d95d-c3c9-42ae-8242-04fac7216865.png" },
-    { name: "Khuyen Tran", company: "Nixtla", avatar: "KT", image: "/lovable-uploads/7caa8d3a-9f6c-4826-802a-da4636221a8e.png" },
-    { name: "Laila Ahadi Akhlaghi", company: "JSI", avatar: "LA", image: "/lovable-uploads/72b2a77a-d8e6-4306-a637-88a97cb9dfc8.png" },
-    { name: "Ritika Arora", company: "Lancaster University", avatar: "RA", image: "/lovable-uploads/8fd9d7ab-dd0e-4ae7-bb75-51aea87e34d1.png" },
+    { name: "Ying Fry", company: "International Institute of Forecasters", avatar: "YF", image: "" },
+    { name: "Anna Sroginis", company: "Lancaster University", avatar: "AS", image: "" },
+    { name: "Yeasmin Khandakar", company: "Monash University", avatar: "YK", image: "" },
+    { name: "Charupriya Sharma", company: "Amazon", avatar: "CS", image: "" },
+    { name: "Xinyu (Rachel) Li", company: "Carnegie Mellon University", avatar: "XL", image: "" },
   ];
 
   useEffect(() => {
@@ -98,12 +99,16 @@ const Index = () => {
             {speakers.map((speaker, index) => (
               <div key={index} className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm mx-auto mb-3 w-48 h-40 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full overflow-hidden">
-                    <img
-                      src={speaker.image.startsWith('/') ? speaker.image : `https://images.unsplash.com/${speaker.image}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80`}
-                      alt={speaker.name}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="w-20 h-20 rounded-full overflow-hidden bg-purple-200 flex items-center justify-center text-purple-800 font-semibold text-lg">
+                    {speaker.image ? (
+                      <img
+                        src={speaker.image}
+                        alt={speaker.name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span>{speaker.avatar}</span>
+                    )}
                   </div>
                 </div>
                 <h3 className="font-semibold text-gray-800">{speaker.name}</h3>
