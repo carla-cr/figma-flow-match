@@ -12,7 +12,7 @@ const Index = () => {
     { name: "Ying Fry", company: "International Institute of Forecasters", avatar: "YF", image: "/lovable-uploads/ying-fry.png" },
     { name: "Anna Sroginis", company: "Lancaster University", avatar: "AS", image: "/lovable-uploads/anna-sroginis.jpg" },
     { name: "Yeasmin Khandakar", company: "Monash University", avatar: "YK", image: "/lovable-uploads/yeasmin-khandakar.jpg" },
-    { name: "Charupriya Sharma", company: "Amazon", avatar: "CS", image: "" },
+    { name: "Charupriya Sharma", company: "Amazon", avatar: "CS", image: "/lovable-uploads/charupriya-sharma.jpg" },
     { name: "Xinyu (Rachel) Li", company: "Carnegie Mellon University", avatar: "XL", image: "" },
   ];
 
