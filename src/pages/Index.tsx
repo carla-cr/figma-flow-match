@@ -98,18 +98,18 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {speakers.map((speaker, index) => (
               <div key={index} className="text-center">
-                <div className="bg-white rounded-lg p-6 shadow-sm mx-auto mb-3 w-48 h-40 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full overflow-hidden bg-purple-200 flex items-center justify-center text-purple-800 font-semibold text-lg">
-                    {speaker.image ? (
-                      <img
-                        src={speaker.image}
-                        alt={speaker.name}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <span>{speaker.avatar}</span>
-                    )}
-                  </div>
+                <div className="bg-white rounded-lg shadow-sm mx-auto mb-3 w-48 h-48 overflow-hidden flex items-center justify-center">
+                  {speaker.image ? (
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-purple-800 font-semibold text-3xl bg-purple-200 w-full h-full flex items-center justify-center">
+                      {speaker.avatar}
+                    </span>
+                  )}
                 </div>
                 <h3 className="font-semibold text-gray-800">{speaker.name}</h3>
                 <p className="text-sm text-gray-500">{speaker.company}</p>
