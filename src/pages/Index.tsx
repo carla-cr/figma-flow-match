@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const Index = () => {
   const speakers = [
     { name: "Mariana Menchero", company: "Nixtla", avatar: "MM", image: "/lovable-uploads/b62b47fc-fb23-405c-98e8-8e14121ec591.png" },
-    { name: "Yibei Hu", company: "Nixtla", avatar: "YH", image: "/lovable-uploads/bc04d95d-c3c9-42ae-8242-04fac7216865.png" },
+    { name: "Yibei Hu", company: "Nixtla", avatar: "YH", image: "/lovable-uploads/yibei-hu.jpg" },
     { name: "Ying Fry", company: "International Institute of Forecasters", avatar: "YF", image: "/lovable-uploads/ying-fry.png" },
     { name: "Anna Sroginis", company: "Lancaster University", avatar: "AS", image: "/lovable-uploads/anna-sroginis.jpg" },
     { name: "Yeasmin Khandakar", company: "Monash University", avatar: "YK", image: "/lovable-uploads/yeasmin-khandakar.jpg" },
