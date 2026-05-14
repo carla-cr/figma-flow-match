@@ -33,7 +33,7 @@ const Index = () => {
     );
 
   return (
-    <div className="w-full bg-gradient-to-b from-pink-50 via-purple-50 to-violet-100 text-[#1a1523]">
+    <div className="w-full bg-[#FAF9FF] text-[#1a1523]">
       {/* Sticky Header */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -56,23 +56,30 @@ const Index = () => {
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 bg-[radial-gradient(circle_at_50%_0%,#f3f0ff_0%,transparent_70%)]"></div>
+        <div className="absolute -top-20 -left-20 w-[28rem] h-[28rem] rounded-full bg-purple-200/40 blur-3xl -z-10"></div>
+        <div className="absolute top-10 right-0 w-[24rem] h-[24rem] rounded-full bg-violet-200/30 blur-3xl -z-10"></div>
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-5xl">
-            <span className="inline-block px-4 py-1.5 bg-purple-100 rounded-full text-xs font-bold uppercase tracking-widest mb-6" style={{ color: '#553588' }}>
-              Montréal 2026 · Global Livestream
-            </span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-50 border border-purple-100 mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse"></span>
+              <span className="text-[11px] font-bold tracking-widest uppercase" style={{ color: '#553588' }}>Montréal 2026 · Global Livestream</span>
+            </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.95] mb-8">
-              Welcoming <span style={{ color: '#553588' }}>Women</span> in Forecasting
+              Welcoming <span className="relative inline-block" style={{ color: '#7C3AED' }}>
+                Women
+                <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M2 10C50 3 150 3 298 10" stroke="#7C3AED" strokeWidth="4" strokeLinecap="round"/>
+                </svg>
+              </span> in Forecasting
             </h1>
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl mb-10" style={{ color: 'rgba(45,26,77,0.65)' }}>
               Women working in the forecasting sphere come together to share insights, experiences, and the latest trends in the industry.
             </p>
             <div className="flex flex-wrap items-center gap-5">
-              <a href="#register" className="inline-flex items-center gap-2 text-white px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-purple-200/60 hover:shadow-xl transition-all" style={{ backgroundColor: '#553588' }}>
+              <a href="#register" className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-2xl font-bold text-base shadow-2xl shadow-purple-500/30 hover:-translate-y-0.5 transition-all" style={{ backgroundColor: '#7C3AED' }}>
                 Reserve your spot →
               </a>
-              <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(85,53,136,0.7)' }}>
+              <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
                 Free · Limited seats · 2 min sign-up
               </p>
             </div>
@@ -91,7 +98,7 @@ const Index = () => {
               { k: "Access", v: "Free · Hybrid" },
             ].map((m) => (
               <div key={m.k}>
-                <span className="block text-[10px] uppercase font-bold tracking-widest mb-1" style={{ color: 'rgba(85,53,136,0.5)' }}>{m.k}</span>
+                <span className="block text-[10px] uppercase font-bold tracking-widest mb-1" style={{ color: '#7C3AED' }}>{m.k}</span>
                 <span className="text-lg md:text-xl font-bold">{m.v}</span>
               </div>
             ))}
