@@ -128,7 +128,7 @@ const Index = () => {
           
           <Button 
             className="text-white px-8 py-3 rounded-lg mb-8 hover:opacity-90"
-            style={{ backgroundColor: '#6A1B9A' }}
+            style={{ backgroundColor: '#553588' }}
             onClick={scrollToForm}
           >
             Register now!
