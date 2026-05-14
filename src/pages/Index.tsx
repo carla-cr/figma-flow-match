@@ -33,7 +33,7 @@ const Index = () => {
     );
 
   return (
-    <div className="w-full bg-[#fdfcff] text-[#1a1523]">
+    <div className="w-full bg-gradient-to-b from-pink-50 via-purple-50 to-violet-100 text-[#1a1523]">
       {/* Sticky Header */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
