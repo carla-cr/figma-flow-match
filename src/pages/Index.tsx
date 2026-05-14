@@ -73,6 +73,9 @@ const Index = () => {
             <p className="font-semibold text-lg" style={{ color: '#553588' }}>
               June 26, 2026 at 11AM EST
             </p>
+            <p className="text-gray-600 mt-2">
+              In person at the University of Quebec · Also streaming online
+            </p>
           </div>
         </div>
 
