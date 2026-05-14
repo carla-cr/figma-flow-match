@@ -74,7 +74,7 @@ const Index = () => {
               June 26, 2026 at 11AM EST
             </p>
             <p className="text-gray-600 mt-1">
-              In person at the University of Quebec · Also streaming online
+              In person at Université du Québec à Montréal (UQAM) · Also streaming online
             </p>
           </div>
         </div>
