@@ -4,7 +4,7 @@ const Index = () => {
   const speakers = [
     { name: "Mariana Menchero", company: "Nixtla", avatar: "MM", image: "/lovable-uploads/mariana-menchero.jpg", linkedin: "https://www.linkedin.com/in/marianamencherogarcia/" },
     { name: "Yibei Hu", company: "Nixtla", avatar: "YH", image: "/lovable-uploads/yibei-hu.jpg", linkedin: "https://www.linkedin.com/in/olivia-hu9908/" },
-    { name: "Ying Fry", company: "International Institute of Forecasters", avatar: "YF", image: "/lovable-uploads/ying-fry.png" },
+    { name: "Ying Fry", company: "International Institute of Forecasters", avatar: "YF", image: "/lovable-uploads/ying-fry.png", linkedin: "https://www.linkedin.com/in/ying-fry-a34738/" },
     { name: "Anna Sroginis", company: "Lancaster University", avatar: "AS", image: "/lovable-uploads/anna-sroginis.jpg", linkedin: "https://www.linkedin.com/in/anna-sroginis-361262155/" },
     { name: "Yeasmin Khandakar", company: "Monash University", avatar: "YK", image: "/lovable-uploads/yeasmin-khandakar.jpg", linkedin: "https://www.linkedin.com/in/yeasminkhandakar/" },
     { name: "Charupriya Sharma", company: "Amazon", avatar: "CS", image: "/lovable-uploads/charupriya-sharma.jpg", linkedin: "https://www.linkedin.com/in/charupriya-sharma/" },
