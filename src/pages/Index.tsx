@@ -71,7 +71,7 @@ const Index = () => {
               insights, experiences, and the latest trends in the industry.
             </p>
             <p className="font-semibold text-lg" style={{ color: '#553588' }}>
-              June 25, 2025 8AM PT
+              June 26, 2026 at 11AM EST
             </p>
           </div>
         </div>
