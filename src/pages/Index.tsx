@@ -59,10 +59,10 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-normal mb-6 text-purple-950">
-            Welcoming <span className="text-purple-700">Women in</span>
+          <h1 className="text-5xl md:text-6xl font-normal mb-6" style={{ color: '#2d1a4d' }}>
+            Welcoming <span style={{ color: '#553588' }}>Women in</span>
             <br />
-            <span className="text-purple-700">Forecasting</span> all over the world
+            <span style={{ color: '#553588' }}>Forecasting</span> all over the world
           </h1>
           
           <div className="bg-white rounded-lg p-6 mb-8 max-w-2xl mx-auto shadow-sm">
@@ -70,7 +70,7 @@ const Index = () => {
               Women working in the forecasting sphere come together to share
               insights, experiences, and the latest trends in the industry.
             </p>
-            <p className="text-purple-700 font-semibold text-lg">
+            <p className="font-semibold text-lg" style={{ color: '#553588' }}>
               June 25, 2025 8AM PT
             </p>
           </div>
@@ -78,7 +78,7 @@ const Index = () => {
 
         {/* Registration Form Section */}
         <div className="text-center mb-8 max-w-2xl mx-auto" id="hubspot-form">
-          <h2 className="text-2xl font-bold text-purple-700 mb-2">
+          <h2 className="text-2xl font-bold mb-2" style={{ color: '#553588' }}>
             Empower Your Future at Women in Forecast
           </h2>
           <p className="text-gray-600 mb-6">
@@ -93,7 +93,7 @@ const Index = () => {
 
         {/* Speakers Section */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-purple-950 mb-12">Speakers</h2>
+          <h2 className="text-4xl font-bold mb-12" style={{ color: '#2d1a4d' }}>Speakers</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {speakers.map((speaker, index) => (
