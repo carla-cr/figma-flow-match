@@ -139,32 +139,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Agenda */}
-      <section id="agenda" className="py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#553588' }}>Agenda</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold">A day for the global forecasting community.</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-2">
-            {[
-              { t: "11:00 AM", h: "Opening remarks", d: "Welcome from Nixtla and the IIF." },
-              { t: "11:30 AM", h: "Keynote talks", d: "Leaders share what's shaping forecasting today." },
-              { t: "01:00 PM", h: "Panel & Q&A", d: "Open conversation with the speakers." },
-              { t: "02:30 PM", h: "Networking", d: "In-person at UQAM and online breakouts." },
-            ].map((it) => (
-              <div key={it.t} className="flex gap-6 py-6 border-b border-purple-50">
-                <span className="font-bold tabular-nums w-20 flex-shrink-0" style={{ color: 'rgba(85,53,136,0.6)' }}>{it.t}</span>
-                <div>
-                  <h4 className="font-bold">{it.h}</h4>
-                  <p className="text-sm mt-0.5" style={{ color: 'rgba(45,26,77,0.6)' }}>{it.d}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Registration */}
       <section id="register" className="pb-24 md:pb-32">
         <div className="max-w-6xl mx-auto px-6">
@@ -209,6 +183,32 @@ const Index = () => {
                 <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Agenda */}
+      <section id="agenda" className="py-24 md:py-32">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#553588' }}>Agenda</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold">A day for the global forecasting community.</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-2">
+            {[
+              { t: "11:00 AM", h: "Opening remarks", d: "Welcome from Nixtla and the IIF." },
+              { t: "11:30 AM", h: "Keynote talks", d: "Leaders share what's shaping forecasting today." },
+              { t: "01:00 PM", h: "Panel & Q&A", d: "Open conversation with the speakers." },
+              { t: "02:30 PM", h: "Networking", d: "In-person at UQAM and online breakouts." },
+            ].map((it) => (
+              <div key={it.t} className="flex gap-6 py-6 border-b border-purple-50">
+                <span className="font-bold tabular-nums w-20 flex-shrink-0" style={{ color: 'rgba(85,53,136,0.6)' }}>{it.t}</span>
+                <div>
+                  <h4 className="font-bold">{it.h}</h4>
+                  <p className="text-sm mt-0.5" style={{ color: 'rgba(45,26,77,0.6)' }}>{it.d}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
