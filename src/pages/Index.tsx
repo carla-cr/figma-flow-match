@@ -23,9 +23,6 @@ const Index = () => {
     };
   }, []);
 
-  const featured = speakers[0];
-  const others = speakers.slice(1);
-
   const SpeakerLink = ({ speaker, children }: { speaker: typeof speakers[number]; children: React.ReactNode }) =>
     speaker.linkedin ? (
       <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${speaker.name} on LinkedIn`} className="block">
@@ -117,23 +114,9 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Featured + smaller cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            <SpeakerLink speaker={featured}>
-              <div className="md:col-span-1 lg:col-span-1 aspect-square relative group overflow-hidden rounded-3xl bg-purple-100 shadow-sm border border-purple-50">
-                {featured.image && (
-                  <img src={featured.image} alt={featured.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1523] via-[#1a1523]/30 to-transparent"></div>
-                <div className="absolute bottom-0 p-6 w-full">
-                  <span className="inline-block px-3 py-1 bg-white/15 backdrop-blur-md rounded text-[10px] font-bold text-white uppercase tracking-widest mb-3">Featured</span>
-                  <h3 className="text-2xl font-bold text-white mb-1">{featured.name}</h3>
-                  <p className="text-purple-100/80 text-sm">{featured.company}</p>
-                </div>
-              </div>
-            </SpeakerLink>
-
-            {others.slice(0, 3).map((s) => (
+          {/* Uniform speaker grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {speakers.map((s) => (
               <SpeakerLink key={s.name} speaker={s}>
                 <div className="aspect-square relative group overflow-hidden rounded-3xl bg-purple-100 shadow-sm border border-purple-50">
                   {s.image ? (
@@ -145,27 +128,6 @@ const Index = () => {
                   <div className="absolute bottom-0 p-5 w-full">
                     <p className="text-[10px] font-bold text-purple-200 uppercase tracking-widest mb-1">{s.company}</p>
                     <h3 className="text-lg font-bold text-white leading-tight">{s.name}</h3>
-                  </div>
-                </div>
-              </SpeakerLink>
-            ))}
-          </div>
-
-          {/* Mini grid for the rest */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-            {others.slice(3).map((s) => (
-              <SpeakerLink key={s.name} speaker={s}>
-                <div className="p-5 rounded-2xl bg-white border border-purple-50 hover:border-[#553588] transition-colors flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden bg-purple-100 flex-shrink-0">
-                    {s.image ? (
-                      <img src={s.image} alt={s.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center font-bold" style={{ color: '#553588' }}>{s.avatar}</div>
-                    )}
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="font-bold truncate">{s.name}</h4>
-                    <p className="text-xs truncate" style={{ color: 'rgba(85,53,136,0.6)' }}>{s.company}</p>
                   </div>
                 </div>
               </SpeakerLink>
