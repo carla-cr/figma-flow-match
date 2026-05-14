@@ -1,8 +1,3 @@
-
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent } from "@/components/ui/card";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -28,127 +23,211 @@ const Index = () => {
     };
   }, []);
 
-  const scrollToForm = () => {
-    const formElement = document.getElementById('hubspot-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const featured = speakers[0];
+  const others = speakers.slice(1);
+
+  const SpeakerLink = ({ speaker, children }: { speaker: typeof speakers[number]; children: React.ReactNode }) =>
+    speaker.linkedin ? (
+      <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${speaker.name} on LinkedIn`} className="block">
+        {children}
+      </a>
+    ) : (
+      <div>{children}</div>
+    );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-purple-200 to-violet-300">
-      {/* Header */}
-      <header className="flex justify-between items-center p-6 max-w-7xl mx-auto">
-        <div className="flex items-center space-x-2">
-          <img 
-            src="/lovable-uploads/01369b9f-6dca-4a39-9faf-7293038d1408.png" 
-            alt="WIF Logo" 
-            className="h-8"
-          />
+    <div className="w-full bg-[#fdfcff] text-[#1a1523]">
+      {/* Sticky Header */}
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-purple-100">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <img src="/lovable-uploads/01369b9f-6dca-4a39-9faf-7293038d1408.png" alt="Women in Forecasting" className="h-8" />
+            <div className="hidden md:block h-6 w-px bg-purple-200"></div>
+            <div className="hidden md:flex items-center gap-2">
+              <span className="text-xs font-semibold uppercase tracking-widest text-purple-400">Hosted by</span>
+              <img src="/lovable-uploads/nixtla-logo.svg" alt="Nixtla" className="h-5 object-contain" />
+            </div>
+          </div>
+          <div className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(45,26,77,0.7)' }}>
+            <a href="#speakers" className="hover:text-[#553588] transition-colors">Speakers</a>
+            <a href="#agenda" className="hover:text-[#553588] transition-colors">Agenda</a>
+            <a href="#register" className="text-white px-6 py-2.5 rounded-full transition-all active:scale-95" style={{ backgroundColor: '#553588' }}>Register</a>
+          </div>
+          <a href="#register" className="md:hidden text-white px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: '#553588' }}>Register</a>
         </div>
-        <div className="flex items-center space-x-3">
-          <img
-            src="/lovable-uploads/nixtla-logo.svg"
-            alt="Nixtla Logo"
-            className="h-6 object-contain"
-          />
-        </div>
-      </header>
+      </nav>
 
-      {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-6 py-8">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-normal mb-6" style={{ color: '#2d1a4d' }}>
-            Welcoming <span style={{ color: '#553588' }}>Women in</span>
-            <br />
-            <span style={{ color: '#553588' }}>Forecasting</span> all over the world
-          </h1>
-          
-          <div className="p-6 mb-8 max-w-2xl mx-auto">
-            <p className="text-lg mb-4" style={{ color: 'rgba(45,26,77,0.85)' }}>
-              Women working in the forecasting sphere come together to share
-              insights, experiences, and the latest trends in the industry.
-            </p>
-            <p className="font-semibold text-lg" style={{ color: '#553588' }}>
-              June 26, 2026 at 11AM EST
-            </p>
-            <p className="mt-1" style={{ color: 'rgba(45,26,77,0.7)' }}>
-              In person at Université du Québec à Montréal (UQAM) · Also streaming online
-            </p>
+      {/* Hero */}
+      <section className="relative pt-36 pb-20 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 bg-[radial-gradient(circle_at_50%_0%,#f3f0ff_0%,transparent_70%)]"></div>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-12 gap-12 items-end">
+            <div className="lg:col-span-8">
+              <span className="inline-block px-4 py-1.5 bg-purple-100 rounded-full text-xs font-bold uppercase tracking-widest mb-6" style={{ color: '#553588' }}>
+                Montréal 2026 · Global Livestream
+              </span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.95]">
+                Welcoming <span style={{ color: '#553588' }}>Women</span> in Forecasting
+              </h1>
+            </div>
+            <div className="lg:col-span-4 pb-2">
+              <p className="text-lg leading-relaxed mb-8" style={{ color: 'rgba(45,26,77,0.65)' }}>
+                Women working in the forecasting sphere come together to share insights, experiences, and the latest trends in the industry.
+              </p>
+              <a href="#register" className="inline-flex items-center gap-2 text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-purple-200/60 hover:shadow-xl transition-all" style={{ backgroundColor: '#553588' }}>
+                Reserve your spot →
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Registration Form Section */}
-        <div className="text-center mb-8 max-w-2xl mx-auto" id="hubspot-form">
-          <h2 className="text-2xl font-bold mb-2" style={{ color: '#553588' }}>
-            Empower Your Future at Women in Forecast
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Join a movement of visionaries shaping tomorrow, reserve your spot today!
-          </p>
-          
-          {/* HubSpot Form */}
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-12">
-            <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
-          </div>
-        </div>
-
-        {/* Speakers Section */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12" style={{ color: '#2d1a4d' }}>Speakers</h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
-            {speakers.map((speaker, index) => (
-              <div key={index} className="text-center">
-                {(() => {
-                  const inner = (
-                    <div className="bg-white rounded-lg shadow-sm mx-auto mb-3 w-48 h-48 overflow-hidden flex items-center justify-center transition-transform hover:scale-105">
-                      {speaker.image ? (
-                        <img
-                          src={speaker.image}
-                          alt={speaker.name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <span className="text-purple-800 font-semibold text-3xl bg-purple-200 w-full h-full flex items-center justify-center">
-                          {speaker.avatar}
-                        </span>
-                      )}
-                    </div>
-                  );
-                  return speaker.linkedin ? (
-                    <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${speaker.name} on LinkedIn`}>
-                      {inner}
-                    </a>
-                  ) : inner;
-                })()}
-                <h3 className="font-semibold text-gray-800">{speaker.name}</h3>
-                <p className="text-sm text-gray-500">{speaker.company}</p>
+      {/* Quick Meta */}
+      <section className="py-10 border-y border-purple-100 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { k: "Date", v: "June 26, 2026" },
+              { k: "Time", v: "11:00 AM EST" },
+              { k: "Venue", v: "UQAM, Montréal" },
+              { k: "Format", v: "Hybrid · Global" },
+            ].map((m) => (
+              <div key={m.k}>
+                <span className="block text-[10px] uppercase font-bold tracking-widest mb-1" style={{ color: 'rgba(85,53,136,0.5)' }}>{m.k}</span>
+                <span className="text-lg md:text-xl font-bold">{m.v}</span>
               </div>
             ))}
           </div>
-          
-          <Button 
-            className="text-white px-8 py-3 rounded-lg mb-8 hover:opacity-90"
-            style={{ backgroundColor: '#553588' }}
-            onClick={scrollToForm}
-          >
-            Register now!
-          </Button>
-          
-          <p className="text-sm text-gray-500">Powered By Nixtla</p>
+        </div>
+      </section>
 
-          <div className="mt-10 flex flex-col items-center space-y-3">
-            <span className="text-sm text-purple-900/80 font-medium">In partnership with</span>
-            <img
-              src="/lovable-uploads/iif-logo.png"
-              alt="International Institute of Forecasters"
-              className="h-16 object-contain"
-            />
+      {/* Speakers */}
+      <section id="speakers" className="py-24 md:py-32 bg-[#faf9ff]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                Exceptional minds,<br/>pioneering insights.
+              </h2>
+              <p style={{ color: 'rgba(45,26,77,0.6)' }}>Meet the researchers and practitioners leading the conversation in forecasting.</p>
+            </div>
+            <div className="text-right">
+              <div className="text-6xl font-black text-purple-100 leading-none">{String(speakers.length).padStart(2, '0')}</div>
+              <div className="text-xs font-bold uppercase tracking-widest -mt-2" style={{ color: '#553588' }}>Featured Speakers</div>
+            </div>
+          </div>
+
+          {/* Featured + smaller cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <SpeakerLink speaker={featured}>
+              <div className="md:col-span-1 lg:col-span-1 aspect-square relative group overflow-hidden rounded-3xl bg-purple-100 shadow-sm border border-purple-50">
+                {featured.image && (
+                  <img src={featured.image} alt={featured.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1523] via-[#1a1523]/30 to-transparent"></div>
+                <div className="absolute bottom-0 p-6 w-full">
+                  <span className="inline-block px-3 py-1 bg-white/15 backdrop-blur-md rounded text-[10px] font-bold text-white uppercase tracking-widest mb-3">Featured</span>
+                  <h3 className="text-2xl font-bold text-white mb-1">{featured.name}</h3>
+                  <p className="text-purple-100/80 text-sm">{featured.company}</p>
+                </div>
+              </div>
+            </SpeakerLink>
+
+            {others.slice(0, 3).map((s) => (
+              <SpeakerLink key={s.name} speaker={s}>
+                <div className="aspect-square relative group overflow-hidden rounded-3xl bg-purple-100 shadow-sm border border-purple-50">
+                  {s.image ? (
+                    <img src={s.image} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold" style={{ color: '#553588' }}>{s.avatar}</div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1523]/85 via-[#1a1523]/20 to-transparent"></div>
+                  <div className="absolute bottom-0 p-5 w-full">
+                    <p className="text-[10px] font-bold text-purple-200 uppercase tracking-widest mb-1">{s.company}</p>
+                    <h3 className="text-lg font-bold text-white leading-tight">{s.name}</h3>
+                  </div>
+                </div>
+              </SpeakerLink>
+            ))}
+          </div>
+
+          {/* Mini grid for the rest */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+            {others.slice(3).map((s) => (
+              <SpeakerLink key={s.name} speaker={s}>
+                <div className="p-5 rounded-2xl bg-white border border-purple-50 hover:border-[#553588] transition-colors flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full overflow-hidden bg-purple-100 flex-shrink-0">
+                    {s.image ? (
+                      <img src={s.image} alt={s.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center font-bold" style={{ color: '#553588' }}>{s.avatar}</div>
+                    )}
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="font-bold truncate">{s.name}</h4>
+                    <p className="text-xs truncate" style={{ color: 'rgba(85,53,136,0.6)' }}>{s.company}</p>
+                  </div>
+                </div>
+              </SpeakerLink>
+            ))}
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* Agenda + Registration */}
+      <section id="register" className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
+            <div id="agenda">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#553588' }}>Agenda</span>
+              <h2 className="text-4xl font-extrabold mb-10">A day for the global forecasting community.</h2>
+              <div className="space-y-6">
+                {[
+                  { t: "11:00 AM", h: "Opening remarks", d: "Welcome from Nixtla and the IIF." },
+                  { t: "11:30 AM", h: "Keynote talks", d: "Leaders share what's shaping forecasting today." },
+                  { t: "01:00 PM", h: "Panel & Q&A", d: "Open conversation with the speakers." },
+                  { t: "02:30 PM", h: "Networking", d: "In-person at UQAM and online breakouts." },
+                ].map((it) => (
+                  <div key={it.t} className="flex gap-6 pb-6 border-b border-purple-50">
+                    <span className="font-bold tabular-nums w-20 flex-shrink-0" style={{ color: 'rgba(85,53,136,0.6)' }}>{it.t}</span>
+                    <div>
+                      <h4 className="font-bold">{it.h}</h4>
+                      <p className="text-sm mt-0.5" style={{ color: 'rgba(45,26,77,0.6)' }}>{it.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-[#553588] rounded-3xl blur-2xl opacity-5"></div>
+              <div className="relative bg-white p-8 md:p-10 rounded-3xl border border-purple-100 shadow-2xl shadow-purple-100/50">
+                <h3 className="text-2xl md:text-3xl font-extrabold mb-2" style={{ color: '#553588' }}>
+                  Empower Your Future at Women in Forecast
+                </h3>
+                <p className="mb-8" style={{ color: 'rgba(45,26,77,0.6)' }}>
+                  Join a movement of visionaries shaping tomorrow — reserve your spot today.
+                </p>
+                <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white py-12 border-t border-purple-50">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex items-center gap-3">
+            <img src="/lovable-uploads/nixtla-logo.svg" alt="Nixtla" className="h-5 object-contain" />
+            <span className="text-sm font-medium" style={{ color: 'rgba(45,26,77,0.5)' }}>Hosted by Nixtla</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(85,53,136,0.5)' }}>In partnership with</span>
+            <img src="/lovable-uploads/iif-logo.png" alt="International Institute of Forecasters" className="h-10 object-contain" />
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
