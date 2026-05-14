@@ -65,15 +65,15 @@ const Index = () => {
             <span style={{ color: '#553588' }}>Forecasting</span> all over the world
           </h1>
           
-          <div className="bg-white rounded-lg p-6 mb-8 max-w-2xl mx-auto shadow-sm">
-            <p className="text-lg text-gray-700 mb-4">
+          <div className="p-6 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg mb-4" style={{ color: 'rgba(45,26,77,0.85)' }}>
               Women working in the forecasting sphere come together to share
               insights, experiences, and the latest trends in the industry.
             </p>
             <p className="font-semibold text-lg" style={{ color: '#553588' }}>
               June 26, 2026 at 11AM EST
             </p>
-            <p className="text-gray-600 mt-1">
+            <p className="mt-1" style={{ color: 'rgba(45,26,77,0.7)' }}>
               In person at Université du Québec à Montréal (UQAM) · Also streaming online
             </p>
           </div>
