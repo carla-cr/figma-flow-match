@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect } from "react";
+import { Calendar, MapPin, Video } from "lucide-react";
 
 const Index = () => {
   const speakers = [
@@ -65,17 +66,36 @@ const Index = () => {
             <span style={{ color: '#553588' }}>Forecasting</span> all over the world
           </h1>
           
-          <div className="bg-white rounded-lg p-6 mb-8 max-w-2xl mx-auto shadow-sm">
-            <p className="text-lg text-gray-700 mb-4">
-              Women working in the forecasting sphere come together to share
-              insights, experiences, and the latest trends in the industry.
+          <div className="bg-white/70 backdrop-blur-md rounded-[2rem] shadow-2xl shadow-purple-900/5 border border-white p-8 md:p-12 mb-8 max-w-2xl mx-auto text-center">
+            <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(85,53,136,0.8)' }}>
+              Women working in the forecasting sphere come together to share insights, experiences, and the latest trends in the industry.
             </p>
-            <p className="font-semibold text-lg" style={{ color: '#553588' }}>
-              June 26, 2026 at 11AM EST
-            </p>
-            <p className="text-gray-600 mt-2">
-              In person at the University of Quebec · Also streaming online
-            </p>
+
+            <div className="flex items-center justify-center mb-8">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#553588]/20"></div>
+              <span className="px-4 text-[10px] font-bold tracking-widest uppercase" style={{ color: 'rgba(85,53,136,0.4)' }}>Event Details</span>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#553588]/20"></div>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center justify-center gap-3" style={{ color: '#553588' }}>
+                <div className="bg-[#553588]/10 p-2.5 rounded-full">
+                  <Calendar className="w-5 h-5" />
+                </div>
+                <span className="font-semibold text-xl">June 26, 2026 at 11AM EST</span>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-center gap-3 mt-1">
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-[#553588]/10 shadow-sm">
+                  <MapPin className="w-4 h-4" style={{ color: '#553588' }} />
+                  <span className="text-sm font-medium" style={{ color: '#553588' }}>University of Quebec</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-[#553588]/10 shadow-sm">
+                  <Video className="w-4 h-4" style={{ color: '#553588' }} />
+                  <span className="text-sm font-medium" style={{ color: '#553588' }}>Streaming Online</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
