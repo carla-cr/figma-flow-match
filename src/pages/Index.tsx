@@ -71,9 +71,12 @@ const Index = () => {
               <p className="text-lg leading-relaxed mb-8" style={{ color: 'rgba(45,26,77,0.65)' }}>
                 Women working in the forecasting sphere come together to share insights, experiences, and the latest trends in the industry.
               </p>
-              <a href="#register" className="inline-flex items-center gap-2 text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-purple-200/60 hover:shadow-xl transition-all" style={{ backgroundColor: '#553588' }}>
+              <a href="#register" className="inline-flex items-center gap-2 text-white px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-purple-200/60 hover:shadow-xl transition-all" style={{ backgroundColor: '#553588' }}>
                 Reserve your spot →
               </a>
+              <p className="text-xs font-semibold uppercase tracking-widest mt-3" style={{ color: 'rgba(85,53,136,0.7)' }}>
+                Free · Limited seats · 2 min sign-up
+              </p>
             </div>
           </div>
         </div>
@@ -87,7 +90,7 @@ const Index = () => {
               { k: "Date", v: "June 26, 2026" },
               { k: "Time", v: "11:00 AM EST" },
               { k: "Venue", v: "UQAM, Montréal" },
-              { k: "Format", v: "Hybrid · Global" },
+              { k: "Access", v: "Free · Hybrid" },
             ].map((m) => (
               <div key={m.k}>
                 <span className="block text-[10px] uppercase font-bold tracking-widest mb-1" style={{ color: 'rgba(85,53,136,0.5)' }}>{m.k}</span>
@@ -164,20 +167,47 @@ const Index = () => {
 
       {/* Registration */}
       <section id="register" className="pb-24 md:pb-32">
-        <div className="max-w-2xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-10">
             <span className="inline-block text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#553588' }}>Register</span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-4" style={{ color: '#553588' }}>
               Empower Your Future at Women in Forecast
             </h2>
             <p className="text-lg" style={{ color: 'rgba(45,26,77,0.6)' }}>
-              Join a movement of visionaries shaping tomorrow — reserve your spot today.
+              Free to attend · In-person at UQAM and live worldwide.
             </p>
           </div>
-          <div className="relative">
-            <div className="absolute -inset-4 bg-[#553588] rounded-3xl blur-2xl opacity-5"></div>
-            <div className="relative bg-white p-8 md:p-10 rounded-3xl border border-purple-100 shadow-2xl shadow-purple-100/50">
-              <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
+          <div className="grid lg:grid-cols-5 gap-10 items-start">
+            <div className="lg:col-span-2 space-y-6">
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: '#553588' }}>What you get</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Keynotes from 7 leading forecasting voices",
+                    "Live panel & open Q&A with speakers",
+                    "Networking — in-person and online breakouts",
+                    "Recording access after the event",
+                  ].map((b) => (
+                    <li key={b} className="flex gap-3 text-sm" style={{ color: 'rgba(45,26,77,0.8)' }}>
+                      <span className="font-bold" style={{ color: '#553588' }}>✓</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-5 rounded-2xl border border-purple-100 bg-white/60">
+                <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: '#553588' }}>Hosted by</p>
+                <p className="text-sm" style={{ color: 'rgba(45,26,77,0.7)' }}>Nixtla in partnership with the International Institute of Forecasters.</p>
+              </div>
+            </div>
+            <div className="lg:col-span-3 relative">
+              <div className="absolute -inset-4 bg-[#553588] rounded-3xl blur-2xl opacity-5"></div>
+              <div className="relative bg-white p-8 md:p-10 rounded-3xl border border-purple-100 shadow-2xl shadow-purple-100/50">
+                <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'rgba(85,53,136,0.7)' }}>
+                  Reserve your spot · Takes 2 minutes
+                </p>
+                <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
+              </div>
             </div>
           </div>
         </div>
