@@ -187,7 +187,7 @@ const Index = () => {
                 <h3 className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: '#553588' }}>What you get</h3>
                 <ul className="space-y-3">
                   {[
-                    "Keynotes from 7 leading forecasting voices",
+                    "Keynotes from leading forecasting voices",
                     "Live panel & open Q&A with speakers",
                     "Networking — in-person and online breakouts",
                     "Recording access after the event",
