@@ -92,7 +92,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { k: "Date", v: "June 26, 2026" },
-              { k: "Time", v: "11:00 AM EST" },
+              { k: "Time", v: "10:00 AM EST" },
               { k: "Venue", v: "UQAM, Montréal" },
               { k: "Access", v: "Free · Hybrid" },
             ].map((m) => (
@@ -152,10 +152,10 @@ const Index = () => {
           </div>
           <div className="grid sm:grid-cols-2 gap-x-12 gap-y-2">
             {[
-              { t: "11:00 AM", h: "Opening remarks", d: "Welcome from Nixtla and the IIF." },
-              { t: "11:30 AM", h: "Keynote talks", d: "Leaders share what's shaping forecasting today." },
-              { t: "01:00 PM", h: "Panel & Q&A", d: "Open conversation with the speakers." },
-              { t: "02:30 PM", h: "Networking", d: "In-person at UQAM and online breakouts." },
+              { t: "10:00 AM", h: "Opening remarks", d: "Welcome from Nixtla and the IIF." },
+              { t: "10:30 AM", h: "Keynote talks", d: "Leaders share what's shaping forecasting today." },
+              { t: "12:00 PM", h: "Panel & Q&A", d: "Open conversation with the speakers." },
+              { t: "01:30 PM", h: "Networking", d: "In-person at UQAM and online breakouts." },
             ].map((it) => (
               <div key={it.t} className="flex gap-6 py-6 border-b border-purple-50">
                 <span className="font-bold tabular-nums w-20 flex-shrink-0" style={{ color: 'rgba(85,53,136,0.6)' }}>{it.t}</span>
