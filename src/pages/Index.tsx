@@ -220,14 +220,14 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-white py-12 border-t border-purple-50">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="max-w-7xl mx-auto pl-6 pr-2 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-3">
             <img src="/lovable-uploads/nixtla-logo.svg" alt="Nixtla" className="h-5 object-contain" />
             <span className="text-sm font-medium" style={{ color: 'rgba(45,26,77,0.5)' }}>Hosted by Nixtla</span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(85,53,136,0.5)' }}>In partnership with</span>
-            <img src="/lovable-uploads/iif-logo.png" alt="International Institute of Forecasters" className="h-10 object-contain" />
+            <img src="/lovable-uploads/iif-logo-full.png" alt="International Institute of Forecasters" className="h-10 object-contain" />
           </div>
         </div>
       </footer>
