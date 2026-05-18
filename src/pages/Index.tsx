@@ -211,7 +211,7 @@ const Index = () => {
                 <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'rgba(85,53,136,0.7)' }}>
                   Reserve your spot · Takes 2 minutes
                 </p>
-                <div className="hs-form-frame" data-region="na1" data-form-id="a0e37df1-e69b-4805-b26d-bb39029f294c" data-portal-id="45906594"></div>
+                <div className="hs-form-frame" data-region="na1" data-form-id="797b5ce5-f17f-4f23-af31-bbd4a4eee61a" data-portal-id="45906594"></div>
               </div>
             </div>
           </div>
