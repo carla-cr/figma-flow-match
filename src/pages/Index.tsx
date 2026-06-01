@@ -3,6 +3,7 @@ import { useEffect } from "react";
 const Index = () => {
   const speakers = [
     { name: "Anna Sroginis", company: "Lancaster University", avatar: "AS", image: "/lovable-uploads/anna-sroginis.jpg", linkedin: "https://www.linkedin.com/in/anna-sroginis-361262155/" },
+    { name: "Yeasmin Khandakar", company: "Transurban", avatar: "YK", image: "/lovable-uploads/yeasmin-khandakar.jpg", linkedin: "https://www.linkedin.com/in/yeasminkhandakar/" },
     { name: "Charupriya Sharma", company: "Amazon", avatar: "CS", image: "/lovable-uploads/charupriya-sharma.jpg", linkedin: "https://www.linkedin.com/in/charupriya-sharma/" },
     { name: "Xinyu (Rachel) Li", company: "Carnegie Mellon University", avatar: "XL", image: "/lovable-uploads/xinyu-li.jpg", linkedin: "https://www.linkedin.com/in/xinyu-rachel-li-3199776a/" },
     { name: "Laila Akhlaghi", company: "JSI", avatar: "LA", image: "/lovable-uploads/laila-akhlaghi.jpg", linkedin: "https://www.linkedin.com/in/lailaakhlaghi/" },
