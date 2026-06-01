@@ -92,7 +92,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { k: "Date", v: "June 26, 2026" },
+              { k: "Date", v: "June 27, 2026" },
               { k: "Time", v: "10:00 AM EST" },
               { k: "Venue", v: "UQAM, Montréal" },
               { k: "Access", v: "Free · Hybrid" },
