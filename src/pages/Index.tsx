@@ -7,7 +7,7 @@ const Index = () => {
     { name: "Charupriya Sharma", company: "Amazon", avatar: "CS", image: "/lovable-uploads/charupriya-sharma.jpg", linkedin: "https://www.linkedin.com/in/charupriya-sharma/" },
     { name: "Xinyu (Rachel) Li", company: "Carnegie Mellon University", avatar: "XL", image: "/lovable-uploads/xinyu-li.jpg", linkedin: "https://www.linkedin.com/in/xinyu-rachel-li-3199776a/" },
     { name: "Laila Akhlaghi", company: "JSI", avatar: "LA", image: "/lovable-uploads/laila-akhlaghi.jpg", linkedin: "https://www.linkedin.com/in/lailaakhlaghi/" },
-    { name: "Shanika Wickramasuriya", company: "Monash University", avatar: "SW", image: "", linkedin: "https://www.linkedin.com/in/shanika-wickramasuriya/" },
+    { name: "Shanika Wickramasuriya", company: "Monash University", avatar: "SW", image: "/lovable-uploads/shanika-wickramasuriya.jpg", linkedin: "https://www.linkedin.com/in/shanika-wickramasuriya/" },
     { name: "Puwasala Gamakumara", company: "Monash University", avatar: "PG", image: "", linkedin: "https://www.linkedin.com/in/puwasala-gamakumara-phd/" },
     { name: "Thiyanga Talagala", company: "University of Sri Jayewardenepura", avatar: "TT", image: "/lovable-uploads/thiyanga-talagala.jpg", linkedin: "" },
     { name: "Mariana Menchero", company: "Nixtla", avatar: "MM", image: "/lovable-uploads/mariana-menchero.jpg", linkedin: "https://www.linkedin.com/in/marianamencherogarcia/" },
